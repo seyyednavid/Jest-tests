@@ -1,0 +1,25 @@
+npm i jest
+
+npx jest 
+npx jest --silent   ==> without console.log()
+
+npx jest --watchAll   ===> watch online
+
+npm i @types/jest  // typescript with jest
+
+
+npm t => npx jest 
+npm t -- --watchAll
+npm t -- --coverage  // see how pecentage of statements and functions was tested.
+
+test.skip  // I have a problem and I want to ignore test at this time
+test.todo  // I do not have time to write a test and want to have a note for future
+test.only  // only consider this test and skip other tests in same page
+
+// when a test file will be added to coverage, we export the related file
+and import in test.js file.
+
+expect(firstInvoice).toMatchSnapshot(); 
+//snapshot folder will be added.check our code like the previous time before refactoring.
+expect(firstInvoice).toMatchInlineSnapshot()
+// instead of folder and file, print snapshot into () for toMatchInlineSnapshot
